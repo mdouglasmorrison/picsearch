@@ -1,11 +1,12 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
+var http = require("http");
+
 
 //Import and instantiate Redis for SS caching
 var redis = require('redis'),
     client;
-
 if (process.env.REDISTOGO_URL) {
     var rtg = require('url').parse(process.env.REDISTOGO_URL);
     client = redis.createClient(rtg.port, rtg.hostname);
@@ -143,12 +144,15 @@ function finalFallback(query, callback){
     });
 }
 
-
 //Connect to Redis
 client.on('connect', function() {
     console.log('connected');
 });
 
+//Keep the App alive
+setInterval(function() {
+    http.get("http://rocky-basin-3780.herokuapp.com");
+}, 300000); // every 5 minutes (300000)
 
 //Start App
 app.listen(app.get('port'), function() {
