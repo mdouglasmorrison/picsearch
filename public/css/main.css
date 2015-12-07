@@ -1,0 +1,174 @@
+html, body, #app, .appContainer {
+  background-color: #fbf8f4;
+  height: 100%; }
+
+.navbar {
+  font-family: Avenir-Book, sans-serif;
+  background-color: #30dbbd;
+  color: #fff;
+  padding: 0.625rem 1.25rem; }
+  .navbar .container {
+    padding-left: 0;
+    padding-right: 0; }
+  .navbar .navbar-header img {
+    width: 9.375rem; }
+  .navbar #navbar * {
+    border-radius: 0;
+    color: #fff; }
+  .navbar #navbar .nav-pills .nav-link {
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    -webkit-transition: all ease-in-out .25s;
+    transition: all ease-in-out .25s; }
+  .navbar #navbar .nav-pills .nav-link:hover {
+    border-color: #fff; }
+
+.results.noImage {
+  display: none; }
+
+.results.hasImage {
+  display: block; }
+
+.results {
+  font-family: Avenir-Book, sans-serif;
+  padding-top: 3.125rem; }
+  .results h1 {
+    color: #30dbbd;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem; }
+  .results h1.error {
+    font-size: 1rem; }
+  .results img {
+    border: 3px solid #30dbbd;
+    width: 100%; }
+
+@media (min-width: 34em) {
+  .results h1 {
+    font-size: 2.5rem; }
+  .results img {
+    width: 25rem; } }
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.search {
+  background-color: #30dbbd;
+  background-image: url("/img/mountains@2x.png");
+  background-repeat: repeat-x;
+  background-position: bottom; }
+  .search * {
+    font-family: Avenir-Book, sans-serif; }
+  .search .invalid-text {
+    color: #e60000; }
+  .search .input-group {
+    box-shadow: -0.0625rem 0.1875rem 0.25rem 0 rgba(51, 51, 51, 0.15);
+    -webkit-transition: -webkit-box-shadow 0.1s ease-out;
+    -webkit-transition: box-shadow 0.1s ease-out;
+    transition: box-shadow 0.1s ease-out; }
+    .search .input-group .form-control {
+      border-color: #708a86;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 0.75rem 1rem; }
+    .search .input-group .btn {
+      background-color: #708a86;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      -webkit-transition: background-color 0.25s ease-out;
+      transition: background-color 0.25s ease-out; }
+    .search .input-group .btn:hover {
+      background-color: #596e6b;
+      -webkit-transition: background-color 0.25s ease-in;
+      transition: background-color 0.25s ease-in; }
+  .search .input-group.invalid, .search .input-group.invalid:focus {
+    box-shadow: none;
+    -webkit-transition: -webkit-box-shadow 0.1s ease-in;
+    -webkit-transition: box-shadow 0.1s ease-in;
+    transition: box-shadow 0.1s ease-in; }
+    .search .input-group.invalid .form-control, .search .input-group.invalid:focus .form-control {
+      border-color: #e60000;
+      border-right: 0.125rem solid #e60000; }
+
+.search.clean {
+  height: 100%;
+  padding-top: 20%;
+  background-size: 250%; }
+
+.search.dirty {
+  padding-bottom: 4.688rem;
+  padding-top: 1.563rem;
+  background-size: 100%;
+  height: 9.375rem;
+  -webkit-transition: height 0.5s ease-in, padding-top 0.5s ease-in, background-size 0.5s ease-in;
+  transition: height 0.5s ease-in, padding-top 0.5s ease-in, background-size 0.5s ease-in; }
+
+.spinner.show {
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  -webkit-transition: all ease-in-out .25s;
+  transition: all ease-in-out .25s;
+  z-index: 9999; }
+  .spinner.show img {
+    left: calc(50% - 6.25rem);
+    position: absolute;
+    top: calc(50% - 4.688rem);
+    width: 12.5rem;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite; }
+
+.spinner.hide {
+  display: none; }
+
+@media (min-width: 34em) {
+  .search.clean {
+    background-size: 200%;
+    padding-top: 15%; }
+  .search.dirty {
+    background-size: 80%; } }
+
+@media (min-width: 48em) {
+  .search .input-group .btn {
+    padding: 0.75rem 3rem; }
+  .search.clean {
+    background-size: 150%;
+    padding-top: 10%; }
+  .search.dirty {
+    background-size: 75%; } }
+
+@media (min-width: 62em) {
+  .search .container {
+    padding-left: 10rem;
+    padding-right: 10rem; }
+  .search.clean {
+    background-size: 100%;
+    padding-top: 10%; }
+  .search.dirty {
+    background-size: 50%;
+    height: 10.94rem; } }
+
+@media (min-width: 75em) {
+  .search .container {
+    padding-left: 15rem;
+    padding-right: 15rem; }
+  .search.clean {
+    background-size: 125%;
+    padding-top: 7.5%; }
+  .search.dirty {
+    height: 14.06rem; } }
+
+.Home {
+  height: 100%;
+  padding-top: 60px; }

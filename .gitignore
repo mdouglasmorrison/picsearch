@@ -13,5 +13,3 @@ build/Release
 .idea
 *.iml
 .DS_Store
-public/css/*
-public/js/*

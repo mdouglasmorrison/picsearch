@@ -9,8 +9,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js",
-    "postinstall": "bower install && gulp"
+    "watch": "nodemon server.js"
   },
   "babel": {
     "presets": ["es2015", "react"]
