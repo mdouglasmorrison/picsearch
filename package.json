@@ -9,13 +9,15 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "postinstall": "bower install && gulp build"
   },
   "babel": {
     "presets": ["es2015", "react"]
   },
   "dependencies": {
     "async": "^1.5.0",
+    "babel-core": "^6.1.19",
     "body-parser": "^1.14.1",
     "classnames": "^2.2.1",
     "colors": "^1.1.2",
