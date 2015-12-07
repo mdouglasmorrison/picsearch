@@ -3609,7 +3609,6 @@ button.close {
   -webkit-overflow-scrolling: touch; }
   .modal.fade .modal-dialog {
     -webkit-transform: translate(0, -25%);
-        -ms-transform: translate(0, -25%);
             transform: translate(0, -25%);
     -webkit-transition: -webkit-transform .3s ease-out;
     transition: -webkit-transform .3s ease-out;
@@ -3617,7 +3616,6 @@ button.close {
     transition: transform .3s ease-out, -webkit-transform .3s ease-out; }
   .modal.in .modal-dialog {
     -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
             transform: translate(0, 0); }
 
 .modal-open .modal {

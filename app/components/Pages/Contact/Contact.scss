@@ -1,0 +1,33 @@
+.contact{
+  padding-top: 4.375rem;
+
+  *{
+    font-family: $font-stack;
+  }
+
+  h1{
+    color: $primary-color;
+    font-weight: 600;
+    margin: 1.25rem 0;
+  }
+
+  h3{
+    font-size: 1.25rem;
+    a{
+      font-weight: 600;
+    }
+  }
+}
+
+@media (min-width: 34em) {
+  .contact{
+    .container{
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    h3{
+      font-size: 1.5rem;
+    }
+  }
+}

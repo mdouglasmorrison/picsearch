@@ -96,7 +96,6 @@ var Header = (function (_React$Component) {
     _createClass(Header, [{
         key: 'render',
         value: function render() {
-            console.log('bs');
             return _react2.default.createElement(
                 'div',
                 null,
@@ -189,11 +188,665 @@ var About = (function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'about' },
                 _react2.default.createElement(
-                    'h1',
-                    null,
-                    'About ME'
+                    'div',
+                    { className: 'container' },
+                    _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Matt Morrison'
+                    ),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        'Technical Skills'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Front End:​'
+                        ),
+                        ' JavaScript, CSS 3, HTML 5'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Frameworks/Libraries:'
+                        ),
+                        ' ​AngularJS, lodash, jQuery, PhantomJS, CasperJS, LESS, Bootstrap, Google Maps'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Unit Testing:'
+                        ),
+                        ' ​Jasmine, Protractor'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Design:'
+                        ),
+                        ' ​Photoshop, OmniGraffle, Balsamiq'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Development Environments:'
+                        ),
+                        ' ​Sublime Text 3, Coda, Visual Studio, WebStorm, IntelliJ'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Version Control:'
+                        ),
+                        ' ​Git, GitHub, SVN, Team Foundation Server, Stash'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Automation/Dependency Management:'
+                        ),
+                        '​ NPM, Gulp, Grunt, Yeoman, Bower'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'I\'ve also dabbled in:'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h6',
+                        null,
+                        'Node.js, Parse/Firebase, PHP, SQL/MySQL, PhoneGap'
+                    ),
+                    _react2.default.createElement(
+                        'h2',
+                        null,
+                        'Experience and Education'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Backbase​ - Technical Consultant Front End ­ 12/14 to present – Atlanta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'b',
+                            null,
+                            'Projects and Responsibilities:'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Internal Product Development ​­ JS, AngularJS, LESS, CSS, HTML, Bootstrap, XML'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Developed and implemented widgets for use in multiple applications across multiple clients, using Angular and LESS.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Because of the wide application of uses, widgets had to conform to requirements for fault tolerance, security, accessibility, device compatibility, as well as be documented for use by other developers across the company.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Keybank ​­ JS, LESS, CSS, HTML, Bootstrap, XML'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Developed and implemented custom widgets and containers.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Consulted on site at the Keybank headquarters, in order to ensure successful delivery of the product.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Recall Portal​­ JS, AngularJS, LESS, CSS, HTML, Bootstrap, JSP, XML'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Developed and implemented custom widgets and containers, including dynamic styling containers, dynamic opt in/opt out widgets and WYSIWYG widgets.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Refactored existing Angular widgets to conform to Angular best practices.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Refactored widgets that use the pub­sub pattern so that they separate concerns more elegantly.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'ADP​ - UI Developer - 8/14 to 11/14 - Alpharetta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'b',
+                            null,
+                            'Projects and Responsibilities:'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        '​Project Redbox​­ AngularJS, JS, LESS, CSS, HTML, Bootstrap, Jasmine, Protractor, Grunt, Bower'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Interpreted requirements from the product team and designs from the UX team in order to build and style new features using AngularJS and LESS'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Adapted the Bootstrap Tour jQuery plugin into a corresponding Angular Service and Directive.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Debugged the code of other team members during hardening.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Wrote unit tests in Jasmine for all new code, as well as for bug fixes.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Wrote automated tests in Protractor for new code and bug fixes.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Named scrum team CSS leader.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Contributed to release and sprint planning.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Cardlytics​​ - UI Engineer - 6/13 to 7/14 - Atlanta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'b',
+                            null,
+                            'Projects and Responsibilities:'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Bank UI Integration ​­ HTML, CSS, JS, jQuery, Bootstrap, SQL, IIS, TFS, Photoshop'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used both vanilla JS and jQuery to inject secure, personalized offer content built with HTML and CSS(including Bootstrap) into a customer’s online banking portal, giving the customer cash back rewards based on their purchase behavior.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Manipulated offer details and behavior using SQL queries in SQL Management Studio.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Designed the UI components to be injected on the bank page.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Configured each project in IIS and practiced version control with TFS.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Next Generation App Suite ​­ HTML, LESS, JS, AngularJS, Bootstrap, IIS, TFS, OmniGraffle, Photoshop'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Contributed significantly to the adoption of AngularJS as the next­gen JavaScript framework by creating an AngularJS demo that was compared to a Knockout/Require/jQuery demo to determine which framework was most suited to team needs.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Gathered business requirements and used those requirements to develop OmniGraffle wireframes for the application suite.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used Photoshop to design a next gen application that allowed an internal team to associate bank transactions with their parent company.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Developed applications alongside senior level software engineers using AngularJS.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used LESS and Bootstrap to style the application.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Demonstrated the functionality of the applications to company stakeholders, including the CIO and several VPs.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Merchant Demo Application ​­ HTML, CSS, JS, jQuery, TFS'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Area Owner'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used the above technologies to maintain and enhance the company external sales tool, a tool that uses replicas of partner online banking portals to demonstrate core offer presentation product to merchants and advertisers.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Created replica UI’s for all new partner banks as part of their onboarding process.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Updated the application to allow sales staff to customize transactions and their associated offers within the banking portals.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Beacons Heat Map Project ​­ HTML, CSS, JS, jQuery, Google Maps API'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used AJAX to obtain an array of recent offer activations.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used the Google Maps API to create a heatmap that plotted the location and density of offer activations worldwide.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Bank Scraping Project ​­ Node.js, PhantomJS, CasperJS, PHP, MySQL'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Created an application that, given a users login credentials, automatically accesses the users online banking portal, grabs the users transactions, and saves those transactions to a database.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Created an Express.js application that takes in user credentials as input.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used node.js to save user credentials to a mySQL database and spawn a PhantomJS/CasperJS process that consumed the user credentials, navigated to the user transaction page, copied the transaction table, and posted it to that same mySQL database.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Project was a direct request from the CIO.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Phonegap Mobile Prototype ​­ HTML, CSS, JS, jQuery, Google Maps API, Phonegap IDE'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Created a mobile application prototype using Phonegap and Google Maps that plots the offers available to a user on a map, based on their current location and how far they are willing to go to obtain an offer.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Institute for Advanced Advertising Studies - Atlanta 4A’s­ 2/13 to 5/13 - Atlanta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Sharpdot Inc ​– Javascript Developer ­ 1/13 to 6/13 – Atlanta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'b',
+                            null,
+                            'Projects and Responsibilities:'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'My Strategic Plan'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used JavaScript to debug custom data table filtering tools.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used JavaScript to create an activity log that tracked all strategic plan changes.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Built custom survey forms using HTML/CSS/JavaScript and AJAX.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'What To Expect Foundation'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Built and implemented custom homepage sliders using HTML, CSS and jQuery.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Implemented jQuery storybook plugin and edited to make ie7 compatible.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Styled Drupal nodes and modules with CSS.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Playback Now'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Created custom header/login bar using HTML/CSS/jQuery.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used JavaScript to manipulate the HTML5 video element.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Prototyped online storefront WebApp using HTML5, CSS3, JS in the Titanium Studio development environment.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'The Creative Circus​ - Interactive Development Student - 1/12 to 1/13 - Atlanta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h4',
+                        null,
+                        _react2.default.createElement(
+                            'b',
+                            null,
+                            'Notable Projects:'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Sweetwater Brewery Interactive Tour'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Created an interactive experience for the SweetWater Brewery using HTML5, CSS3, JavaScript, the HTML5 canvas element and the jQuery and KineticJS frameworks.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used JQuery and KineticJS to create scrollable and navigable panoramas of the brewery interior.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Wireframed the site in OmniGraffle using UX best practices.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Designed and comped the site in Photoshop.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'SportsData/Google Maps/Yelp API Mashup'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Made AJAX calls to the SportsData/Google Maps/Yelp APIs to create an interactive visitors guide to the 2012 college bowl games.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Parsed JSON and XML and appended results to the DOM.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used HTML5 and CSS3 to build and style the site.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Designed and comped the site in Photoshop.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Instagram/Google Maps API Mashup'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Made AJAX calls to the Instagram and Google Maps APIs to plot the location of Instagram pictures on a Google Map.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Parsed JSON and appended results to the DOM.'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Authenticated AJAX calls using OAuth2.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Responsive Online Magazine Theme'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used HTML5 and CSS3 to build a responsive magazine theme.'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Twitter Search WebApp'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Made AJAX calls to the Twitter API in order to append search result to the DOM'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'The Morrison Agency​ - Project Associate - 9/11­12/11 - Atlanta, GA'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'The University of Georgia​, ​Terry College of Business'
+                    ),
+                    _react2.default.createElement(
+                        'h5',
+                        null,
+                        'Bachelor of Business Administration in Banking and Finance (May 2010)'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        'Additional Experience'
+                    ),
+                    _react2.default.createElement(
+                        'ul',
+                        null,
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Used HTML and CSS to build and maintain the website for my college rock band. (2007­2009)'
+                        ),
+                        _react2.default.createElement(
+                            'li',
+                            null,
+                            'Taught myself HTML in order to build and maintain a sports blog during high school. (2004­2006)'
+                        )
+                    )
                 )
             );
         }
@@ -241,11 +894,62 @@ var Contact = (function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'contact' },
                 _react2.default.createElement(
-                    'h1',
-                    null,
-                    'Contact ME'
+                    'div',
+                    { className: 'container' },
+                    _react2.default.createElement(
+                        'h1',
+                        null,
+                        'Contact Matt'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Phone:'
+                        ),
+                        ' (404)444-6202'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        _react2.default.createElement(
+                            'strong',
+                            null,
+                            'Email:'
+                        ),
+                        ' mdouglasmorrison@gmail.com'
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://github.com/mdouglasmorrison', target: '_blank' },
+                            'GitHub'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://www.linkedin.com/in/mattlanta', target: '_blank' },
+                            'LinkedIn'
+                        )
+                    ),
+                    _react2.default.createElement(
+                        'h3',
+                        null,
+                        _react2.default.createElement(
+                            'a',
+                            { href: 'https://twitter.com/MD_Morrison', target: '_blank' },
+                            'Twitter'
+                        )
+                    )
                 )
             );
         }
@@ -971,7 +1675,7 @@ function getUserConfirmation(message, callback) {
 }
 
 /**
- * Returns true if the HTML5 history API is supported. Taken from modernizr.
+ * Returns true if the HTML5 history API is supported. Taken from Modernizr.
  *
  * https://github.com/Modernizr/Modernizr/blob/master/LICENSE
  * https://github.com/Modernizr/Modernizr/blob/master/feature-detects/history.js
@@ -981,6 +1685,11 @@ function getUserConfirmation(message, callback) {
 function supportsHistory() {
   var ua = navigator.userAgent;
   if ((ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) && ua.indexOf('Mobile Safari') !== -1 && ua.indexOf('Chrome') === -1 && ua.indexOf('Windows Phone') === -1) {
+    return false;
+  }
+  // FIXME: Work around our browser history not working correctly on Chrome
+  // iOS: https://github.com/rackt/react-router/issues/2565
+  if (ua.indexOf('CriOS') !== -1) {
     return false;
   }
   return window.history && 'pushState' in window.history;
@@ -1239,6 +1948,10 @@ var _createLocation2 = require('./createLocation');
 
 var _createLocation3 = _interopRequireDefault(_createLocation2);
 
+var _parsePath = require('./parsePath');
+
+var _parsePath2 = _interopRequireDefault(_parsePath);
+
 var _runTransitionHook = require('./runTransitionHook');
 
 var _runTransitionHook2 = _interopRequireDefault(_runTransitionHook);
@@ -1363,15 +2076,10 @@ function createHistory() {
       if (ok) {
         // treat PUSH to current path like REPLACE to be consistent with browsers
         if (nextLocation.action === _Actions.PUSH) {
-          var _getCurrentLocation = getCurrentLocation();
+          var prevPath = createPath(location);
+          var nextPath = createPath(nextLocation);
 
-          var pathname = _getCurrentLocation.pathname;
-          var search = _getCurrentLocation.search;
-
-          var currentPath = pathname + search;
-          var path = nextLocation.pathname + nextLocation.search;
-
-          if (currentPath === path) nextLocation.action = _Actions.REPLACE;
+          if (nextPath === prevPath) nextLocation.action = _Actions.REPLACE;
         }
 
         if (finishTransition(nextLocation) !== false) updateLocation(nextLocation);
@@ -1384,20 +2092,12 @@ function createHistory() {
     });
   }
 
-  function pushState(state, path) {
-    transitionTo(createLocation(path, state, _Actions.PUSH, createKey()));
+  function push(location) {
+    transitionTo(createLocation(location, null, _Actions.PUSH, createKey()));
   }
 
-  function push(path) {
-    pushState(null, path);
-  }
-
-  function replaceState(state, path) {
-    transitionTo(createLocation(path, state, _Actions.REPLACE, createKey()));
-  }
-
-  function replace(path) {
-    replaceState(null, path);
+  function replace(location) {
+    transitionTo(createLocation(location, null, _Actions.REPLACE, createKey()));
   }
 
   function goBack() {
@@ -1412,12 +2112,12 @@ function createHistory() {
     return createRandomKey(keyLength);
   }
 
-  function createPath(path) {
-    if (path == null || typeof path === 'string') return path;
+  function createPath(location) {
+    if (location == null || typeof location === 'string') return location;
 
-    var pathname = path.pathname;
-    var search = path.search;
-    var hash = path.hash;
+    var pathname = location.pathname;
+    var search = location.search;
+    var hash = location.hash;
 
     var result = pathname;
 
@@ -1428,8 +2128,8 @@ function createHistory() {
     return result;
   }
 
-  function createHref(path) {
-    return createPath(path);
+  function createHref(location) {
+    return createPath(location);
   }
 
   function createLocation(path, state, action) {
@@ -1465,12 +2165,24 @@ function createHistory() {
     });
   }
 
+  // deprecated
+  function pushState(state, path) {
+    if (typeof path === 'string') path = _parsePath2['default'](path);
+
+    push(_extends({ state: state }, path));
+  }
+
+  // deprecated
+  function replaceState(state, path) {
+    if (typeof path === 'string') path = _parsePath2['default'](path);
+
+    replace(_extends({ state: state }, path));
+  }
+
   return {
     listenBefore: listenBefore,
     listen: listen,
     transitionTo: transitionTo,
-    pushState: pushState,
-    replaceState: replaceState,
     push: push,
     replace: replace,
     go: go,
@@ -1483,13 +2195,15 @@ function createHistory() {
 
     setState: _deprecate2['default'](setState, 'setState is deprecated; use location.key to save state instead'),
     registerTransitionHook: _deprecate2['default'](registerTransitionHook, 'registerTransitionHook is deprecated; use listenBefore instead'),
-    unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead')
+    unregisterTransitionHook: _deprecate2['default'](unregisterTransitionHook, 'unregisterTransitionHook is deprecated; use the callback returned from listenBefore instead'),
+    pushState: _deprecate2['default'](pushState, 'pushState is deprecated; use push instead'),
+    replaceState: _deprecate2['default'](replaceState, 'replaceState is deprecated; use replace instead')
   };
 }
 
 exports['default'] = createHistory;
 module.exports = exports['default'];
-},{"./Actions":12,"./AsyncUtils":13,"./createLocation":20,"./deprecate":21,"./runTransitionHook":24,"deep-equal":25}],20:[function(require,module,exports){
+},{"./Actions":12,"./AsyncUtils":13,"./createLocation":20,"./deprecate":21,"./parsePath":23,"./runTransitionHook":24,"deep-equal":25}],20:[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -1503,16 +2217,19 @@ var _parsePath = require('./parsePath');
 var _parsePath2 = _interopRequireDefault(_parsePath);
 
 function createLocation() {
-  var path = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
+  var location = arguments.length <= 0 || arguments[0] === undefined ? '/' : arguments[0];
   var state = arguments.length <= 1 || arguments[1] === undefined ? null : arguments[1];
   var action = arguments.length <= 2 || arguments[2] === undefined ? _Actions.POP : arguments[2];
   var key = arguments.length <= 3 || arguments[3] === undefined ? null : arguments[3];
 
-  if (typeof path === 'string') path = _parsePath2['default'](path);
+  if (typeof location === 'string') location = _parsePath2['default'](location);
 
-  var pathname = path.pathname || '/';
-  var search = path.search || '';
-  var hash = path.hash || '';
+  var pathname = location.pathname || '/';
+  var search = location.search || '';
+  var hash = location.hash || '';
+
+  // TODO: Deprecate passing state directly into createLocation.
+  state = location.state || state;
 
   return {
     pathname: pathname,

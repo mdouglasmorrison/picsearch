@@ -7,7 +7,6 @@ class Header extends React.Component {
     }
 
     render() {
-        console.log('bs');
         return (
             <div>
                 <nav className="navbar navbar-default navbar-fixed-top">
