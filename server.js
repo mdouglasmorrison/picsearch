@@ -3,8 +3,16 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 //Import and instantiate Redis for SS caching
-var redis = require('redis');
-var client = redis.createClient();
+var redis = require('redis'),
+    client;
+
+if (process.env.REDISTOGO_URL) {
+    var rtg = require('url').parse(process.env.REDISTOGO_URL);
+    client = redis.createClient(rtg.port, rtg.hostname);
+    client.auth(rtg.auth.split(":")[1]);
+} else {
+   client = redis.createClient();
+}
 
 // Babel ES6/JSX Compiler
 require('babel-core/register');
