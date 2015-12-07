@@ -15,21 +15,22 @@
     "presets": ["es2015", "react"]
   },
   "dependencies": {
-    "alt": "^0.17.8",
     "async": "^1.5.0",
     "body-parser": "^1.14.1",
+    "classnames": "^2.2.1",
     "colors": "^1.1.2",
     "compression": "^1.6.0",
     "express": "^4.13.3",
+    "googleapis": "^2.1.6",
     "history": "^1.13.0",
-    "lodash": "^3.10.1",
-    "morgan": "^1.6.1",
     "react": "^0.14.2",
     "react-dom": "^0.14.2",
     "react-router": "^1.0.0",
+    "redis": "^2.4.2",
     "request": "^2.65.0",
     "serve-favicon": "^2.3.0",
-    "swig": "^1.4.2"
+    "swig": "^1.4.2",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-loader": "^6.1.0",

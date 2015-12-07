@@ -1,0 +1,17 @@
+$font-stack:    Avenir-Book, sans-serif;
+$primary-color: #30dbbd;
+$secondary-color: #708a86;
+$invalid-red: #e60000;
+$white: #fff;
+
+
+
+
+@import "components/App/App.scss";
+@import "components/Header/Header.scss";
+@import "components/Results/Results.scss";
+@import "components/Search/Search.scss";
+
+@import "components/Pages/About/About.scss";
+@import "components/Pages/Home/Home.scss";
+@import "components/Pages/Contact/Contact.scss";

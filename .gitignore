@@ -1,3 +1,17 @@
 .idea
 node_modules
 bower_components
+logs
+*.log
+*.pid
+*.seed
+lib-cov
+coverage
+.gulp
+build/Release
+.lock-wscript
+.idea
+*.iml
+.DS_Store
+public/css/*
+public/js/*

@@ -1,0 +1,40 @@
+.results.noImage{
+  display: none;
+}
+
+.results.hasImage{
+  display: block;
+}
+
+.results{
+  font-family: $font-stack;
+  padding-top: 3.125rem;
+
+  h1{
+    color: $primary-color;
+    font-size: 1.75rem;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+  }
+
+  h1.error{
+    font-size: 1rem;
+  }
+
+  img{
+    border: 3px solid $primary-color;
+    width: 100%;
+  }
+}
+
+@media (min-width: 34em) {
+  .results{
+    h1{
+      font-size: 2.5rem;
+    }
+
+    img{
+      width: 25rem;
+    }
+  }
+}
