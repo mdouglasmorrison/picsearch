@@ -11,7 +11,7 @@
 
   .navbar-header{
     img{
-      width: 9.375rem;
+      width: 9rem;
     }
   }
 
@@ -42,6 +42,12 @@
 
 @media (min-width: 34em) {
   .navbar{
+    .navbar-header{
+      img{
+        width: 9.375rem;
+      }
+    }
+
     #navbar{
       .nav-pills{
         .nav-link{
