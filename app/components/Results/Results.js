@@ -14,7 +14,7 @@ class Results extends React.Component {
         this.setNewImage = this.setNewImage.bind(this);
     }
 
-    setNewImage(url, err){
+    setNewImage(url, errorMessage){
         if(err){
             this.setState({serverError: err});
         }else{
@@ -27,14 +27,14 @@ class Results extends React.Component {
 
     render() {
         var resultClasses = classNames({
-            'results': true,
-            'hasImage': this.state.hasImage,
-            'noImage': this.state.hasImage === false
-        }),
-        errorClass = classNames({
-            'error': this.state.serverError !== false
-        }),
-        text = this.state.serverError ? this.state.serverError.responseText : 'Here\'s The Closest Match:';
+                'results': true,
+                'hasImage': this.state.hasImage,
+                'noImage': this.state.hasImage === false
+            }),
+            errorClass = classNames({
+                'error': this.state.serverError !== false
+            }),
+            text = this.state.serverError ? this.state.serverError : 'Here\'s The Closest Match:';
 
 
         return (

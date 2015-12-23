@@ -29,20 +29,20 @@ class Search extends React.Component {
                     self.setState({showSpinner: true});
                 }
             })
-            .done((data) => {
-                    this.setState({isClean: false});
-                    this.props.getNewImage(data, false);
-                    this.setState({showSpinner: false});
-            })
-            .fail((response, message) => {
-                    if(response.status === 404){
-                        this.props.getNewImage('/img/default.png', response);
+                .done((response) => {
+                    if(!response){
+                        this.props.getNewImage('/img/default.png', 'This person doesnt exist');
                     }else{
-                        this.props.getNewImage('/img/obi.gif', response);
+                        this.props.getNewImage(response, null);
                     }
                     this.setState({isClean: false});
                     this.setState({showSpinner: false});
-            });
+                })
+                .fail((response) => {
+                    this.props.getNewImage('/img/obi.gif', 'Something went terribly wrong');
+                    this.setState({isClean: false});
+                    this.setState({showSpinner: false});
+                });
         }else {
             this.setState({isValid: false});
         }
@@ -61,20 +61,20 @@ class Search extends React.Component {
 
     render() {
         var inputClasses = classNames({
-            'input-group': true,
-            'valid': this.state.isValid,
-            'invalid': this.state.isValid === false
-        }),
-        formClasses = classNames({
-            'search': true,
-            'clean': this.state.isClean,
-            'dirty': this.state.isClean === false
-        }),
-        spinnerClasses = classNames({
-            'spinner': true,
-            'show': this.state.showSpinner,
-            'hide': this.state.showSpinner === false
-        });
+                'input-group': true,
+                'valid': this.state.isValid,
+                'invalid': this.state.isValid === false
+            }),
+            formClasses = classNames({
+                'search': true,
+                'clean': this.state.isClean,
+                'dirty': this.state.isClean === false
+            }),
+            spinnerClasses = classNames({
+                'spinner': true,
+                'show': this.state.showSpinner,
+                'hide': this.state.showSpinner === false
+            });
 
         return(
             <div className={formClasses}>

@@ -3,6 +3,8 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var http = require("http");
 
+var Promise = require('bluebird');
+
 
 //Import and instantiate Redis for SS caching
 var redis = require('redis'),
@@ -12,7 +14,7 @@ if (process.env.REDISTOGO_URL) {
     client = redis.createClient(rtg.port, rtg.hostname);
     client.auth(rtg.auth.split(":")[1]);
 } else {
-   client = redis.createClient();
+    client = redis.createClient();
 }
 
 // Babel ES6/JSX Compiler
@@ -53,18 +55,23 @@ app.get('/api/search', function(req, res, next) {
                 res.json(reply);
             });
         } else {
-            getContact(req.query.email, function(error, reply) {
-                if(error){
-                    if(error === 404){
-                        res.send(404, 'You seem to be searching for someone who doesnt exist. Maybe try another email?');
-                    }else{
-                        res.send(500, 'Oh No! There was an error on the server. Please try again later.');
-                    }
-                }else{
-                    client.set(req.query.email, reply);
-                    res.json(reply);
-                }
-            });
+            getPictureFromFullContact(req.query.email)
+                .then(function (response) {
+                    res.json(response);
+                })
+                .catch(function (error) {
+                    getPictureFromGoogle(req.query.email)
+                        .then(function (response){
+                            res.json(response);
+                        })
+                        .catch(function(error){
+                            if(error && error.status === 404){
+                                res.send(404);
+                            }else{
+                                res.send(500);
+                            }
+                        });
+                });
         }
     });
 });
@@ -87,62 +94,60 @@ app.use(function(req, res) {
 });
 
 
-//Functions for API consumption. Tries FullContact first. If no results, tries Google Images. If no results, does a
-//Google Image search by suggested spelling.
-
-//FullContact
-function getContact(email, callback) {
+var getPictureFromFullContact = function(email) {
     var options = {
         url: 'https://api.fullcontact.com/v2/person.json?email=' + email + '&apiKey=5f16c7b83f528e2a',
         method: 'GET'
     };
 
-    request(options, function (error, response, body) {
-        if (!error && response.statusCode == 200) {
+    return new Promise(function(resolve, reject) {
+        request(options, function (error, response, body) {
             var parseResponse = JSON.parse(body);
-            if(parseResponse.photos && parseResponse.photos.length > 0){
-                callback(false, parseResponse.photos[0].url);
-            }else{
-                fallbackRequest(email, callback);
+            if (error || response.statusCode !== 200 || !parseResponse.photos || parseResponse.photos.length === 0) {
+                error = error || response.statusCode || 404;
+                reject(error);
+            } else {
+                resolve(parseResponse.photos[0].url);
             }
-        }
-        else{
-            fallbackRequest(email, callback);
-        }
+        });
     });
-}
+};
 
-//Fallback to Google Images
-function fallbackRequest(email, callback){
-    customsearch.cse.list({ cx: CX, q: email, searchType: TYPE, auth: API_KEY }, function(error, response){
-        if (!error) {
-            if (!response.items && response.spelling && response.spelling.correctedQuery) {
-                finalFallback(response.spelling.correctedQuery, callback)
-            }else if(!response.items) {
-                callback(404, {});
-            }else {
-                callback(false, response.items[0].link);
-            }
-        }else{
-            callback(500, {});
-        }
-    });
-}
-
-//Fallback to Google Images by suggested spelling
-function finalFallback(query, callback){
-    customsearch.cse.list({ cx: CX, q: query, searchType: TYPE, auth: API_KEY }, function(error, response){
-        if(!error){
+var getPictureFromGoogle = function(email){
+    return new Promise(function(resolve, reject) {
+        customsearch.cse.list({ cx: CX, q: email, searchType: TYPE, auth: API_KEY }, function(error, response){
             if(response.items){
-                callback(false, response.items[0].link);
+                resolve(response.items[0].link);
+            }else if(response.spelling && response.spelling.correctedQuery) {
+                customsearch.cse.list({
+                    cx: CX,
+                    q: response.spelling.correctedQuery,
+                    searchType: TYPE,
+                    auth: API_KEY
+                }, function (error, response) {
+                    if (error) {
+                        if (!error.status) {
+                            error.status = 500;
+                        }
+                        reject(error);
+                    } else if (response.searchInformation.totalResults === '0') {
+                        resolve(null);
+                    } else {
+                        resolve(response.items[0].link);
+                    }
+                });
+            }else if(error) {
+                if(!error.status){
+                    error.status = 500;
+                }
+                reject(error);
             }else{
-                callback(404, {});
+                resolve(null);
             }
-        }else{
-            callback(500, {});
-        }
+        });
     });
-}
+};
+
 
 //Connect to Redis
 client.on('connect', function() {
